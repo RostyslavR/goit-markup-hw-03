@@ -34,6 +34,8 @@
   /* mail-link color */
   --mail-link-color: rgba(255, 255, 255, 0.6);
 }
+/* 
+}
 html {
   box-sizing: border-box;
 }
@@ -42,6 +44,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+*/
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -219,7 +222,7 @@ address {
   width: calc(var(--page-width) / 4 - var(--item-margin));
   margin-top: var(--item-margin);
 }
-.preference-item:not(:nth-child(4n-3)) {
+.preference-item:not(:nth-child(4n + 1)) {
   margin-left: var(--item-margin);
 }
 /* 4 items */
@@ -234,7 +237,7 @@ address {
   width: calc(var(--page-width) / 3 - var(--item-margin));
   margin-top: var(--item-margin);
 }
-.work-item:not(:nth-child(3n-2)) {
+.work-item:not(:nth-child(3n + 1)) {
   margin-left: var(--item-margin);
 }
 /* 3 items */
@@ -247,7 +250,7 @@ address {
   border-radius: 0px 0px 4px 4px;
   background: var(--primary-color);
 }
-.person-item:not(:nth-child(4n-3)) {
+.person-item:not(:nth-child(4n + 1)) {
   margin-left: var(--item-margin);
 }
 /* 4 items */
@@ -322,7 +325,7 @@ address {
   border: 1px solid #eeeeee;
   /* border: 1px solid #000000; */
 }
-.portfolio-item:not(:nth-child(3n-2)) {
+.portfolio-item:not(:nth-child(3n + 1)) {
   margin-left: var(--item-margin);
 }
 .portfolio-title {
