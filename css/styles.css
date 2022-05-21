@@ -7,10 +7,10 @@
   --nav-margin: 50px;
   /* button margin */
   --button-margin: 8px;
-  /* section margin */
-  --section-margin: 94px;
+  /* section padding */
+  --section-padding: 94px;
   /* section title margin */
-  --section-title-margin: 20px;
+  --section-title-margin: 50px;
   /* item margin */
   --item-margin: 30px;
 
@@ -82,11 +82,17 @@ address {
   margin: 0;
   list-style: none;
 }
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--item-margin));
+  margin-left: calc(-1 * var(--item-margin));
+}
 .section {
-  margin: var(--section-margin) 0 0 0;
+  padding: var(--section-padding) 0;
 }
 .preference-section {
-  margin: 64px;
+  padding: var(--section-padding) 0 0 0;
 }
 .container {
   width: var(--page-width);
@@ -107,7 +113,8 @@ address {
 }
 /* page header */
 .page-header {
-  margin-top: 25px;
+  padding: 25px 0;
+  border-bottom: 1px solid #ececec;
 }
 .header-container {
   display: flex;
@@ -150,7 +157,6 @@ address {
   color: var(--secondary-color);
 }
 .hero-section {
-  margin-top: 25px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -189,12 +195,35 @@ address {
   cursor: pointer;
 }
 .section-title {
+  margin: 0 0 var(--section-title-margin) 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--header-color);
-  margin: 0;
+}
+/* 4 items in line */
+.preference-item,
+.person-item {
+  max-width: calc(var(--page-width) / 4 - var(--item-margin));
+}
+/* 3 items in line */
+.work-item,
+.portfolio-item {
+  max-width: calc(var(--page-width) / 3 - var(--item-margin));
+}
+.preference-item,
+.person-item,
+.work-item,
+.portfolio-item{
+  margin-top: var(--item-margin);
+  margin-left: var(--item-margin);
+}
+.person-item {
+  padding-bottom: var(--item-margin);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: var(--primary-color);
 }
 .preference-title,
 .person-title {
@@ -213,47 +242,6 @@ address {
   line-height: 1.19;
   text-align: center;
 }
-.preference-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-/* 4 items in line */
-.preference-item {
-  width: calc(var(--page-width) / 4 - var(--item-margin));
-  margin-top: var(--item-margin);
-}
-.preference-item:not(:nth-child(4n + 1)) {
-  margin-left: var(--item-margin);
-}
-/* 4 items */
-.work-list,
-.person-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--section-title-margin);
-}
-/* 3 items in line */
-.work-item {
-  width: calc(var(--page-width) / 3 - var(--item-margin));
-  margin-top: var(--item-margin);
-}
-.work-item:not(:nth-child(3n + 1)) {
-  margin-left: var(--item-margin);
-}
-/* 3 items */
-/* 4 items in line */
-.person-item {
-  width: calc(var(--page-width) / 4 - var(--item-margin));
-  margin-top: var(--item-margin);
-  padding-bottom: var(--item-margin);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background: var(--primary-color);
-}
-.person-item:not(:nth-child(4n + 1)) {
-  margin-left: var(--item-margin);
-}
-/* 4 items */
 .preference-text,
 .person-text {
   margin: 10px 0 0 0;
@@ -261,7 +249,6 @@ address {
 .person-text {
   text-align: center;
 }
-/* Footer */
 .studio-footer {
   color: var(--primary-color);
 }
@@ -288,6 +275,7 @@ address {
 /* Портфолио */
 .filter-list {
   display: flex;
+  margin-bottom: 34px;
   justify-content: center;
 }
 .filter-item:not(:first-child) {
@@ -312,21 +300,10 @@ address {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--section-title-margin);
-}
 .portfolio-item {
-  width: calc(var(--page-width) / 3 - var(--item-margin));
-  margin-top: var(--item-margin);
   padding-bottom: var(--item-margin);
   background: var(--primary-color);
   border: 1px solid #eeeeee;
-  /* border: 1px solid #000000; */
-}
-.portfolio-item:not(:nth-child(3n + 1)) {
-  margin-left: var(--item-margin);
 }
 .portfolio-title {
   margin-top: var(--item-margin);
