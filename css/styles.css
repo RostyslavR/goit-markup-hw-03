@@ -58,6 +58,7 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
 }
 address {
   font-style: normal;
@@ -205,17 +206,17 @@ address {
 /* 4 items in line */
 .preference-item,
 .person-item {
-  max-width: calc(var(--page-width) / 4 - var(--item-margin));
+  flex-basis: calc(100% / 4 - var(--item-margin));
 }
 /* 3 items in line */
 .work-item,
 .portfolio-item {
-  max-width: calc(var(--page-width) / 3 - var(--item-margin));
+  flex-basis: calc(100% / 3 - var(--item-margin));
 }
 .preference-item,
 .person-item,
 .work-item,
-.portfolio-item{
+.portfolio-item {
   margin-top: var(--item-margin);
   margin-left: var(--item-margin);
 }
