@@ -56,11 +56,14 @@ body {
   color: var(--text-color);
   background-color: var(--primary-color);
 }
+p {
+  margin: 0;
+}
 img {
   display: block;
   max-width: 100%;
-  margin-bottom: var(--item-margin);
 }
+
 address {
   font-style: normal;
 }
@@ -202,6 +205,10 @@ address {
   line-height: 1.17;
   text-align: center;
   color: var(--header-color);
+}
+.person-item img,
+.portfolio-item img {
+  margin-bottom: var(--item-margin);
 }
 /* 4 items in line */
 .preference-item,
